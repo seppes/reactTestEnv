@@ -8,11 +8,6 @@ body {
   flex-direction: row;
 }
 
-.productLine div {
-  flex: 1;
-}
-
-
 .note {
   color: #a21212;
   font-size: smaller;
