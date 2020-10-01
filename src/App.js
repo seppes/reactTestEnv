@@ -9,9 +9,10 @@ function App() {
     return (
         <div>
             <h1>Menu</h1>
+            <hr/>
             {PRODUCTS_DATA.map((c) =>
                 <Category key={c.name} category={c}>
-                    {c.subcategorie.map((s) =>
+                    {c.subcategories.map((s) =>
                         <SubCategory key={s.name} subcategory={s}>
                             {s.products.map((p) =>
                                 <ProductLine key={p.id} product={p}/>)}
