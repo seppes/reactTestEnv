@@ -4,12 +4,14 @@ import {SubCategory} from "./components/subcategory";
 import {ProductLine} from "./components/productline";
 import {PRODUCTS_DATA} from "./data/products_data";
 import './App.css';
+import styled from '@emotion/styled';
+
 
 function App() {
     return (
         <div>
+
             <h1>Menu</h1>
-            <hr/>
             {PRODUCTS_DATA.map((c) =>
                 <Category key={c.name} category={c}>
                     {c.subcategories.map((s) =>
