@@ -6,12 +6,19 @@ import {PRODUCTS_DATA} from "./data/products_data";
 import './App.css';
 import styled from '@emotion/styled';
 
+const StyledFixedNav = styled.h1`
+    margin-left: 3vw;
+    margin-right: 2vw;
+    color: white;
+    background-color: black;
+    text-align: center;
+`;
 
 function App() {
     return (
         <div>
 
-            <h1>Menu</h1>
+            <StyledFixedNav>Menu</StyledFixedNav>
             {PRODUCTS_DATA.map((c) =>
                 <Category key={c.name} category={c}>
                     {c.subcategories.map((s) =>

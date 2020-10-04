@@ -5,6 +5,7 @@ import styled from "@emotion/styled";
 function CategoryNote(props) {
     return <Note note={props.note} className={"categoryNote"}/>;
 }
+
 const StyledH1 = styled.h1`
             border-top: solid thin;
             paddig-top: 16px;
