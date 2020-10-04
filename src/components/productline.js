@@ -11,6 +11,10 @@ const StyledProductLine = styled.div`
             }
             `;
 
+const StyledProductSize = styled.div`
+            font-size: 0.6em;
+            `;
+
 function ProductNote(props) {
     return <Note note={props.note} className={"productNote"}/>;
 }
@@ -21,7 +25,7 @@ export function ProductLine(props) {
         <StyledProductLine className="productLine">
             <StyledProductLine>
                 {product.name}
-                {product.size && <span className="productSize">  • {product.size}CL</span>}
+                {product.size && <StyledProductSize className="productSize">  • {product.size}CL</StyledProductSize>}
             </StyledProductLine>
             <StyledProductLine>{product.price}&euro;</StyledProductLine>
         </StyledProductLine>

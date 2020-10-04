@@ -10,11 +10,15 @@ const StyledH1 = styled.h1`
             paddig-top: 16px;
             `;
 
+const StyledCategorNote = styled.div`
+ padding: 0 0 0.5em 0;
+`;
+
 export function Category(props) {
     const {category} = props;
-    return <div>
+    return <StyledCategorNote>
         <StyledH1>{category.name}</StyledH1>
         <CategoryNote note={category.note}/>
         {props.children}
-    </div>;
+    </StyledCategorNote>;
 }
