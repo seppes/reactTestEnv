@@ -6,6 +6,7 @@ import {PRODUCTS_DATA} from "./data/products_data";
 import './App.css';
 import styled from '@emotion/styled';
 
+
 const StyledFixedNav = styled.h1`
     margin-left: 3vw;
     margin-right: 2vw;
