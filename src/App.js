@@ -3,8 +3,10 @@ import {Category} from "./components/category";
 import {SubCategory} from "./components/subcategory";
 import {ProductLine} from "./components/productline";
 import {PRODUCTS_DATA} from "./data/products_data";
-import './App.css';
 import styled from '@emotion/styled';
+import 'normalize.css';
+import './App.css';
+
 
 
 const StyledFixedNav = styled.h1`

@@ -12,13 +12,14 @@ const StyledProductLine = styled.div`
             `;
 
 const StyledProductSize = styled.div`
+            color : ${(props) => props.isActive ? "green" : "black"};
             font-size: 0.6em;
             & div {
             flex: 1;}
             `;
 const StyledProductPrice = styled.div`
-            & div {
-            flex: 1;}
+            flex: 2;
+            text-align: right;
             `;
 
 function ProductNote(props) {
@@ -31,9 +32,9 @@ export function ProductLine(props) {
         <StyledProductLine className="productLine">
             <StyledProductLine>
                 {product.name}
-                {product.size && <StyledProductSize className="productSize">  • {product.size}CL</StyledProductSize>}
+                {product.size && <StyledProductSize className="productSize"> • {product.size}CL</StyledProductSize>}
             </StyledProductLine>
-            <div>{product.price}&euro;</div>
+            <StyledProductPrice>{product.price}&euro;</StyledProductPrice>
         </StyledProductLine>
         <ProductNote note={product.note}/>
     </>;
