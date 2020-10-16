@@ -20,18 +20,26 @@ const StyledFixedNav = styled.h1`
 function App() {
     return (
         <div>
-
-            <StyledFixedNav>Menu</StyledFixedNav>
-            {PRODUCTS_DATA.map((c) =>
-                <Category key={c.name} category={c}>
-                    {c.subcategories.map((s) =>
-                        <SubCategory key={s.name} subcategory={s}>
-                            {s.products.map((p) =>
-                                <ProductLine key={p.id} product={p}/>)}
-                        </SubCategory>)}
-                </Category>)}
+            <small>You are running this application in <b>{process.env.NODE_ENV}</b> mode.</small>
+            <form>
+                <input type="hidden" defaultValue={process.env.REACT_APP_NOT_SECRET_CODE} />
+            </form>
         </div>
-    )
+    );
+    // return (
+    //     <div>
+    //
+    //         <StyledFixedNav>Menu</StyledFixedNav>
+    //         {PRODUCTS_DATA.map((c) =>
+    //             <Category key={c.name} category={c}>
+    //                 {c.subcategories.map((s) =>
+    //                     <SubCategory key={s.name} subcategory={s}>
+    //                         {s.products.map((p) =>
+    //                             <ProductLine key={p.id} product={p}/>)}
+    //                     </SubCategory>)}
+    //             </Category>)}
+    //     </div>
+    // )
 }
 
 export default App;
