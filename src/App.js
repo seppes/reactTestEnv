@@ -8,7 +8,6 @@ import 'normalize.css';
 import './App.css';
 
 
-
 const StyledFixedNav = styled.h1`
     margin-left: 3vw;
     margin-right: 2vw;
@@ -22,7 +21,7 @@ function App() {
         <div>
             <small>You are running this application in <b>{process.env.NODE_ENV}</b> mode.</small>
             <form>
-                <input type="hidden" defaultValue={process.env.REACT_APP_NOT_SECRET_CODE} />
+                <input type="hidden" defaultValue={process.env.REACT_APP_NOT_SECRET_CODE}/>
             </form>
         </div>
     );
